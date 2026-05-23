@@ -3,6 +3,7 @@ This module implements the Residue function and related tools for working
 with residues.
 """
 
+
 from __future__ import annotations
 from typing import TYPE_CHECKING
 
@@ -71,7 +72,11 @@ def residue(expr: Expr | complex, x: Symbol, x0: Expr | complex) -> Expr:
         args = s.args
     else:
         args = [s]
+<<<<<<< Updated upstream
     res: Expr = S.Zero                    
+=======
+    res = S.Zero
+>>>>>>> Stashed changes
     for arg in args:
         c, m = arg.as_coeff_mul(x)
         m = Mul(*m)
